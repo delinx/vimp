@@ -6,5 +6,6 @@ bin-wezterm/*
 !bin-weztrem/PLACE wezterm-gui.exe HERE
 
 data/*
+data/**/*.gitignore
 !data/**/
 !data/**/*.empty
