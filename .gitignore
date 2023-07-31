@@ -1,0 +1,4 @@
+bin-linux/*
+bin-win/*
+!bin-linux/PLACE nvim-linux64 HERE
+!bin-win/PLACE nvim-win64 HERE
