@@ -26,7 +26,9 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-require("lazy").setup(require'./plugins')
+require("lazy").setup(require'./plugin', { lockfile = nvim_dir .. "/lazy-lock.json" })
 
 -- Require the user module
 require("user")
+
+require("plugins")

@@ -7,6 +7,7 @@ vim.opt.number = true  -- Enables line numbers on the left side of the window.
 vim.opt.relativenumber = true  -- Enables relative line numbering from the cursor line.
 vim.opt.cursorline = true  -- Highlights the current line where the cursor is located.
 vim.opt.guicursor = ""  -- Controls the appearance of the cursor in GUI mode. Empty string leaves it to default.
+vim.opt.guicursor = 'a:blinkon0'
 vim.opt.guifont = "Berkeley Mono:h19"  -- Sets the GUI font to RobotoNerd with height 14.
 vim.opt.background = "dark"  -- Sets the background to dark mode for syntax highlighting.
 vim.opt.colorcolumn = "80"  -- Highlights the 80th column to indicate the length of code lines.

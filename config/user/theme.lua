@@ -1,10 +1,6 @@
 function ColorMyPencils(color)
-    if vim.fn.exists("g:colors_name") ~= 0 then
-        color = vim.g.colors_name
-    else
-        color = color or "default"
-    end
-    vim.cmd('colorscheme ' .. color)
+    color = color or "gruvbox"
+    vim.cmd.colorscheme(color)
 
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
@@ -40,4 +36,6 @@ require("gruvbox").setup({
     },
 })
 
-ColorMyPencils("gruvbox")
+ColorMyPencils()
+
+vim.cmd("autocmd BufWritePre * TSDisable rainbow | TSEnable rainbow")
