@@ -3,7 +3,7 @@ bin-win/*
 bin-wezterm/*
 !bin-linux/PLACE nvim-linux64 HERE
 !bin-win/PLACE nvim-win64 HERE
-!bin-weztrem/PLACE wezterm-gui.exe HERE
+!bin-wezterm/PLACE wezterm-gui.exe HERE
 
 data/*
 data/**/*.gitignore
