@@ -1,10 +1,14 @@
 vim.g["HOME"] = vim.g["VIM"]
 
+
+
 -- Get the directory of the Neovim executable
 local nvim_dir = vim.fn.fnamemodify(vim.v.progpath, ":h:h:h:h")
 
 -- Add the "config" directory in the parent directory of the Neovim binary to package.path
 package.path = nvim_dir .. "/config/?.lua;" .. nvim_dir .. "/config/?/init.lua;" .. package.path
+
+vim.o.shada = "'50,<1000,s100,:0,n" .. nvim_dir .. "/data/shada"  
 
 vim.opt.undodir = nvim_dir .. "/data/undodir//"  
 vim.opt.backupdir = nvim_dir .. "/data/backup//" 
@@ -26,7 +30,7 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-require("lazy").setup(require'./plugin', { lockfile = nvim_dir .. "/lazy-lock.json" })
+require("lazy").setup(require('./plugin'), { lockfile = nvim_dir .. "/lazy-lock.json" })
 
 -- Require the user module
 require("user")
