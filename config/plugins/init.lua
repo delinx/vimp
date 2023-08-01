@@ -1,15 +1,12 @@
 -- Open fzf
-vim.keymap.set("n", "<leader>z", "<cmd>:FzfLua git_files<CR>")
-vim.keymap.set("n", "<leader>b", "<cmd>:FzfLua buffers<CR>")
-vim.keymap.set("n", "<leader>l", "<cmd>:FzfLua live_grep<CR>")
-vim.keymap.set("n", "<leader>ff", "<cmd>:FzfLua<CR>")
+vim.keymap.set("n", "<leader>z", "<cmd>:Files<CR>")
+vim.keymap.set("n", "<leader>b", "<cmd>:Buffers<CR>")
+vim.fn.setenv('FZF_DEFAULT_COMMAND', "rg --color=never --files --hidden --follow --glob=!.git/ .")
 
-require('fzf-lua').setup {
-    winopts = {
-        cmd = "rg --color=never --files --hidden --follow -g '!.git'",
-        fzf_opts = { ['--layout'] = 'bottom', ['height'] = '40%' },
-    }
-}
+require("nvim-tree").setup()
+vim.keymap.set("n", "<leader>t", "<cmd>:NvimTreeFocus<CR>")
+vim.keymap.set("n", "<leader>tc", "<cmd>:NvimTreeFindFile<CR>")
+vim.keymap.set("n", "<leader>tt", "<cmd>:NvimTreeToggle<CR>")
 
 require('gitsigns').setup {
     signs                        = {

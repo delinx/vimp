@@ -6,23 +6,18 @@ return
     dependencies = {
       'p00f/nvim-ts-rainbow',
       'windwp/nvim-ts-autotag',
-      'nvim-treesitter/nvim-treesitter-context',
       'nvim-treesitter/playground',
     }
   },
 { 'VonHeikemen/lsp-zero.nvim' },
 {
-  "ibhagwan/fzf-lua",
-  -- optional for icon support
-  dependencies = { "nvim-tree/nvim-web-devicons" },
-  config = function()
-    -- calling `setup` is optional for customization
-    require("fzf-lua").setup({})
-  end
+  "junegunn/fzf"
 },
+{ "junegunn/fzf.vim" },
 { "lukas-reineke/virt-column.nvim" },
 { "lukas-reineke/indent-blankline.nvim" },
 { "lukas-reineke/lsp-format.nvim" },
+{ "nvim-tree/nvim-tree.lua" },
 {
   {
     'VonHeikemen/lsp-zero.nvim',
