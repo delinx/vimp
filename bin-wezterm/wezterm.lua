@@ -48,7 +48,7 @@ return {
     harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
     adjust_window_size_when_changing_font_size = false,
     --window_background_opacity = 0.8,
-    window_background_opacity = 0.90,
+    window_background_opacity = 0.96,
     use_fancy_tab_bar = false,
 
     inactive_pane_hsb = {
@@ -56,7 +56,7 @@ return {
         brightness = 1.0,
     },
 
-    --freetype_load_flags = 'NO_HINTING',
+    freetype_load_flags = 'NO_HINTING',
     freetype_load_target = 'Normal',
     
     window_padding = {
@@ -67,7 +67,7 @@ return {
     },
 
     colors = {
-        background = 'black',
+        background = '#1c1c1c',
 
         ansi = { '#000000', '#f78166', '#689d6a', '#e3b341', '#6ca4f8', '#db61a2', '#2b7489', '#ebdbb2', },
         brights = { '#4d4d4d', '#f78166', '#8ec07c', '#e3b341', '#6ca4f8', '#db61a2', '#2b7489', '#fbf1c7', },
