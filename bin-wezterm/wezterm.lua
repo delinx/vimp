@@ -48,7 +48,7 @@ return {
     harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' },
     adjust_window_size_when_changing_font_size = false,
     --window_background_opacity = 0.8,
-    window_background_opacity = 0.95,
+    window_background_opacity = 0.80,
     use_fancy_tab_bar = false,
 
     inactive_pane_hsb = {
